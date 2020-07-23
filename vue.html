@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <p>{{name}}</p>
+        <p v-text="name"></p>
+        <p>{{age}}</p>
+        <input v-model="name" type="text">
+        <!-- <button v-html="html"></button> -->
+    </div>
+
+    <script src="./Vue.js"></script>
+    <script src='./Watcher.js'></script>
+    <script src="./Compiler.js"></script>
+    <script src="./Dep.js"></script>
+    <script src="./"></script>
+    <script type="text/javascript">
+        const app = new Vue({
+            el: '#app',
+            data: {
+                name: 'kira',
+                age: 25,
+                test: '111',
+                info: {
+                    //name:'kira'
+                }
+            },
+            created() {
+                console.log('开始啦')
+                // setTimeout(() => {
+                //     this.name = '我是测试'
+                // }, 1500)
+            },
+        })
+        // app.$data.info.name = 'zhansan'
+    </script>
+</body>
+
+</html>
